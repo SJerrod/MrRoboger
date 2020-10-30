@@ -9,9 +9,13 @@ function checkNumber(number) {
 function roboSpeak(number) {
   let beepBoop = [];
   for (i=0; i <= number; i ++) {
-    beepBoop.push(i);
+    let robo = i.toString();
+    if (robo.includes(3)) {
+      beepBoop.push("Won't you be my neighbor?")
+    } else {
+      beepBoop.push(i);
+    }
   }
-  console.log(beepBoop);
   return beepBoop
 }
 
@@ -23,8 +27,9 @@ $(document).ready(function() {
 
     const number = $("input#number").val();
     checkNumber(number);
-    let result = roboSpeak(number);
+    let result = (roboSpeak(number)).toString();
 
     $(".roboTalk").after(result);
+    $(".translation").show();
   });
 });
