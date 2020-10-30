@@ -14,6 +14,8 @@ function roboSpeak(number) {
       beepBoop.push("Won't you be my neighbor?")
     } else if (robo.includes(2)) {
       beepBoop.push("Boop!")
+    } else if (robo.includes(1)) {
+      beepBoop.push("Beep!")
     } else {
       beepBoop.push(i);
     }
