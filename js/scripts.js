@@ -23,6 +23,13 @@ function roboSpeak(number, name) {
   return beepBoop
 }
 
+function reverseNum(result) {
+  let reverseNumbers = [];
+  for (let i= result.length -1; i >= 0; i--) {
+    reverseNumbers.push(result[i])
+  }
+  return reverseNumbers;
+}
 
 // User Logic
 $(document).ready(function() {
@@ -33,10 +40,12 @@ $(document).ready(function() {
     let name = $("input#name").val();
     const number = $("input#number").val();
     checkNumber(number);
-    let result = (roboSpeak(number, name)).toString();
-  
+    let result = roboSpeak(number, name);
+    let reverse = reverseNum(result);
+
     $(".name").text(name + ", ");
-    $(".roboTalk").text(result); 
+    $(".roboTalk").text(result);
+    $(".talkRobo").text(reverse); 
     $(".col-md-8").fadeIn();
   });
 });
