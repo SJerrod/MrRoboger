@@ -1,12 +1,14 @@
 body {
   background-image: url(../images/Neighborhood.jpg);
+  height: 750px;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
 }
 
 .jumbotron {
   background: rgba(223, 1, 1, 0.45);
+  color: aliceblue;
   padding-top: 20px;
   padding-bottom: 20px;
   font-weight: bold;
@@ -14,25 +16,19 @@ body {
   
 }
 
-.translation {
-  display: none;
-}
-
 .translation img {
+  margin-top: 20px;
   width: 300px;
   height: auto;
   border-radius: 50%;
 }
 
-/* .translation p {
-  border: solid black;
-  border-radius: 50%;
-  padding: 20px;
-  margin-left: 100px;
-} */
+.col-md-8 {
+  display: none;
+}
 
-.box {
-  width: 400px;
+.box1 {
+  width: auto;
   height: auto;
   margin: 20px auto;
   background:#4b79a9;
@@ -54,5 +50,5 @@ body {
   border-bottom: 10px solid#4b79a9;
   border-top: 10px solid transparent;
   left: -20px;
-  bottom: 0px;
+  top: 0px;
 }

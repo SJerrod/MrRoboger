@@ -29,14 +29,14 @@ $(document).ready(function() {
   $("#roboger").submit(function(event) {
     event.preventDefault();
 
+    $(".col-md-8").hide();
     let name = $("input#name").val();
     const number = $("input#number").val();
     checkNumber(number);
     let result = (roboSpeak(number, name)).toString();
   
-
-    $(".name").text(name + ",");
+    $(".name").text(name + ", ");
     $(".roboTalk").text(result); 
-    $(".translation").show();
+    $(".col-md-8").fadeIn();
   });
 });
