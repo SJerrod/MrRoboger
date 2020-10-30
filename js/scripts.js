@@ -12,6 +12,8 @@ function roboSpeak(number) {
     let robo = i.toString();
     if (robo.includes(3)) {
       beepBoop.push("Won't you be my neighbor?")
+    } else if (robo.includes(2)) {
+      beepBoop.push("Boop!")
     } else {
       beepBoop.push(i);
     }
