@@ -33,7 +33,7 @@ $(document).ready(function() {
     checkNumber(number);
     let result = (roboSpeak(number)).toString();
 
-    $(".roboTalk").after(result);
+    $(".roboTalk").text(result); // changed .after to .text so the previous input doesnt save
     $(".translation").show();
   });
 });
