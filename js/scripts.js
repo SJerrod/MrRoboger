@@ -6,6 +6,15 @@ function checkNumber(number) {
   }
 }
 
+function roboSpeak(number) {
+  let beepBoop = [];
+  for (i=0; i <= number; i ++) {
+    beepBoop.push(i);
+  }
+  console.log(beepBoop);
+  return beepBoop
+}
+
 
 // User Logic
 $(document).ready(function() {
@@ -13,7 +22,8 @@ $(document).ready(function() {
     event.preventDefault();
 
     const number = $("input#number").val();
-    let result = checkNumber(number);
+    checkNumber(number);
+    let result = roboSpeak(number);
 
     $(".roboTalk").after(result);
   });
