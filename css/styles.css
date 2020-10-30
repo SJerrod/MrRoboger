@@ -1,3 +1,58 @@
+body {
+  background-image: url(../images/Neighborhood.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.jumbotron {
+  background: rgba(223, 1, 1, 0.45);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  
+}
+
 .translation {
   display: none;
+}
+
+.translation img {
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* .translation p {
+  border: solid black;
+  border-radius: 50%;
+  padding: 20px;
+  margin-left: 100px;
+} */
+
+.box {
+  width: 400px;
+  height: auto;
+  margin: 20px auto;
+  background:#4b79a9;
+  padding: 20px;
+  text-align: center;
+  font-weight: 300;
+  color: #fff;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position: relative;
+}
+
+.sb1:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-right: 10px solid#4b79a9;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid#4b79a9;
+  border-top: 10px solid transparent;
+  left: -20px;
+  bottom: 0px;
 }

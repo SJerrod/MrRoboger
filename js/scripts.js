@@ -33,6 +33,7 @@ $(document).ready(function() {
     const number = $("input#number").val();
     checkNumber(number);
     let result = (roboSpeak(number, name)).toString();
+  
 
     $(".name").text(name + ",");
     $(".roboTalk").text(result); 
