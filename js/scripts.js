@@ -6,12 +6,12 @@ function checkNumber(number) {
   }
 }
 
-function roboSpeak(number) {
+function roboSpeak(number, name) {
   let beepBoop = [];
   for (i=0; i <= number; i ++) {
     let robo = i.toString();
     if (robo.includes(3)) {
-      beepBoop.push("Won't you be my neighbor?")
+      beepBoop.push("Won't you be my neighbor " + name + "?")
     } else if (robo.includes(2)) {
       beepBoop.push("Boop!")
     } else if (robo.includes(1)) {
@@ -29,11 +29,13 @@ $(document).ready(function() {
   $("#roboger").submit(function(event) {
     event.preventDefault();
 
+    let name = $("input#name").val();
     const number = $("input#number").val();
     checkNumber(number);
-    let result = (roboSpeak(number)).toString();
+    let result = (roboSpeak(number, name)).toString();
 
-    $(".roboTalk").text(result); // changed .after to .text so the previous input doesnt save
+    $(".name").text(name + ",");
+    $(".roboTalk").text(result); 
     $(".translation").show();
   });
 });
